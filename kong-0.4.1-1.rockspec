@@ -78,6 +78,7 @@ build = {
     ["kong.reports.init_worker"] = "kong/reports/init_worker.lua",
     ["kong.reports.log"] = "kong/reports/log.lua",
 
+    ["kong.dao.cassandra.schema.migrations"] = "kong/dao/cassandra/schema/migrations.lua",
     ["kong.dao.error"] = "kong/dao/error.lua",
     ["kong.dao.schemas_validation"] = "kong/dao/schemas_validation.lua",
     ["kong.dao.schemas.apis"] = "kong/dao/schemas/apis.lua",
@@ -99,6 +100,7 @@ build = {
     ["kong.plugins.basicauth.api"] = "kong/plugins/basicauth/api.lua",
     ["kong.plugins.basicauth.daos"] = "kong/plugins/basicauth/daos.lua",
 
+    ["kong.plugins.keyauth.migrations.cassandra"] = "kong/plugins/keyauth/migrations/cassandra.lua",
     ["kong.plugins.keyauth.handler"] = "kong/plugins/keyauth/handler.lua",
     ["kong.plugins.keyauth.access"] = "kong/plugins/keyauth/access.lua",
     ["kong.plugins.keyauth.schema"] = "kong/plugins/keyauth/schema.lua",
@@ -181,5 +183,5 @@ build = {
     conf = { "kong.yml" },
     bin = { "bin/kong" }
   },
-  copy_directories = { "database/migrations/", "ssl" }
+  copy_directories = { "ssl" }
 }
